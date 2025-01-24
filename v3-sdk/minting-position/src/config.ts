@@ -1,6 +1,6 @@
 import { Token } from '@uniswap/sdk-core'
 import { FeeAmount } from '@uniswap/v3-sdk'
-import { DAI_TOKEN, USDC_TOKEN } from './libs/constants'
+import { USDC_TOKEN, USDT_TOKEN } from './libs/constants'
 
 // Sets if the example should run locally or on chain
 export enum Environment {
@@ -35,18 +35,18 @@ export const CurrentConfig: ExampleConfig = {
   env: Environment.LOCAL,
   rpc: {
     local: 'http://localhost:8545',
-    mainnet: '',
+    mainnet: 'http://localhost:8545',
   },
   wallet: {
-    address: '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266',
+    address: '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
     privateKey:
-      '0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80',
+      '0x5de4111afa1a4b94908f83103eb1f1706367c2e68ca870fc3fb9a804cdab365a',
   },
   tokens: {
     token0: USDC_TOKEN,
-    token0Amount: 1000,
-    token1: DAI_TOKEN,
-    token1Amount: 1000,
+    token0Amount: 100,
+    token1: USDT_TOKEN,
+    token1Amount: 100,
     poolFee: FeeAmount.LOW,
   },
 }

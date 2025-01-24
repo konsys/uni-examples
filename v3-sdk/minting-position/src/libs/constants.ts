@@ -11,20 +11,20 @@ export const NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS =
 
 // Currencies and Tokens
 
-export const USDC_TOKEN = new Token(
-  SupportedChainId.MAINNET,
-  '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48',
+export const USDT_TOKEN = new Token(
+  SupportedChainId.ARBITRUM_ONE,
+  '0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9',
   6,
-  'USDC',
-  'USD//C'
+  'USDT',
+  'USD//T'
 )
 
-export const DAI_TOKEN = new Token(
-  SupportedChainId.MAINNET,
-  '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+export const USDC_TOKEN = new Token(
+  SupportedChainId.ARBITRUM_ONE,
+  '0xaf88d065e77c8cC2239327C5EDb3A432268e5831',
   18,
-  'DAI',
-  'Dai Stablecoin'
+  'USDC',
+  'USDC'
 )
 
 // Transactions
