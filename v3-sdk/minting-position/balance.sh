@@ -6,6 +6,7 @@ export BINANCE=0xB38e8c17e38363aF6EbdCb3dAE12e0243582891D
 export USDT_HOLDER=0xF977814e90dA44bFA03b6295A0616a897441aceC
 export BOB=0x70997970C51812dc3A010C7d01b50e0d17dc79C8
 export TEST_ACC=0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC
+export DAI=0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1
 
 cast rpc anvil_impersonateAccount $BINANCE
 cast rpc anvil_impersonateAccount $ALICE
@@ -37,6 +38,11 @@ cast send $WETH \
 --from $BINANCE \
   "transfer(address,uint256)(bool)" --unlocked \
   $TEST_ACC 3000000000000
+
+  cast send $DAI \
+--from $BINANCE \
+  "transfer(address,uint256)(bool)" --unlocked \
+  $TEST_ACC 2000000000000
 
 cast send $USDT \
 --from $BINANCE \

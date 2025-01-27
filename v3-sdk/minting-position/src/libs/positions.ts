@@ -200,16 +200,22 @@ export async function getTokenTransferApproval(
       ERC20_ABI,
       provider
     )
-
+    console.log(
+      'NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS',
+      NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS
+    )
     const transaction = await tokenContract.populateTransaction.approve(
       NONFUNGIBLE_POSITION_MANAGER_CONTRACT_ADDRESS,
       TOKEN_AMOUNT_TO_APPROVE_FOR_TRANSFER
     )
 
-    return sendTransaction({
+    const tr = {
       ...transaction,
       from: address,
-    })
+    }
+    console.log('transaction', tr)
+
+    return sendTransaction(tr)
   } catch (e) {
     console.error(e)
     return TransactionState.Failed
